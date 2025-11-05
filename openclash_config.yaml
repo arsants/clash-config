@@ -152,6 +152,22 @@ proxy-groups:
     lazy: true
     timeout: 5000
     max-failed-times: 5
+  
+  # LOAD BALANCE distributes traffic evenly across proxy.
+  - name: EXTENDED
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - MANUAL SELECT
+      - BEST PING
+      - FALLBACK
+      - LOAD BALANCE
+    url: "https://cp.cloudflare.com"
+    interval: 60
+    lazy: true
+    timeout: 5000
+    max-failed-times: 5
 
 rule-providers:
   # Ensure the YAML files exist in the specified paths.
@@ -262,5 +278,5 @@ rules:
   - RULE-SET,Twitch,GLOBAL
 
   # Default rule: route all unmatched traffic directly
-  - MATCH,DIRECT
+  - MATCH,EXTENDED
   
