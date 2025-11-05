@@ -252,14 +252,14 @@ rules:
   - RULE-SET,Adult,SPECIAL ACCESS
 
   # (use proxy)
-  - RULE-SET,Facebook,MANUAL SELECT
-  - RULE-SET,Instagram,MANUAL SELECT
-  - RULE-SET,TikTok,MANUAL SELECT
-  - RULE-SET,Twitter,MANUAL SELECT
-  - RULE-SET,YouTube,MANUAL SELECT
-  - RULE-SET,Programming,MANUAL SELECT
-  - RULE-SET,Discord,MANUAL SELECT
-  - RULE-SET,Twitch,MANUAL SELECT
+  - RULE-SET,Facebook,GLOBAL
+  - RULE-SET,Instagram,GLOBAL
+  - RULE-SET,TikTok,GLOBAL
+  - RULE-SET,Twitter,GLOBAL
+  - RULE-SET,YouTube,GLOBAL
+  - RULE-SET,Programming,GLOBAL
+  - RULE-SET,Discord,GLOBAL
+  - RULE-SET,Twitch,GLOBAL
 
   # Default rule: route all unmatched traffic directly
   - MATCH,DIRECT
