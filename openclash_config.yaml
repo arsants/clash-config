@@ -237,13 +237,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/twitch.yaml"
     interval: 3600
     behavior: classical
-  
-  NoResolve:
-    type: http
-    path: "./rule_provider/no-resolve.yaml"
-    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/no-resolve.yaml"
-    interval: 3600
-    behavior: classical
 
 rules:
   # Reject rules for blocked domains (e.g., ads, trackers, malicious sites)
@@ -266,7 +259,6 @@ rules:
   - RULE-SET,Programming,GLOBAL
   - RULE-SET,Discord,GLOBAL
   - RULE-SET,Twitch,GLOBAL
-  - RULE-SET,NoResolve,GLOBAL,no-resolve
 
   # Default rule: route all unmatched traffic directly
   - MATCH,DIRECT
