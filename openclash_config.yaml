@@ -37,12 +37,12 @@ dns:
     # - 94.140.15.15
 
     # Option 2 | Cloudflare DNS
-    - 1.1.1.1
-    - 1.0.0.1
+    # - 1.1.1.1
+    # - 1.0.0.1
 
     # Option 3 | Google DNS
-    # - 8.8.8.8
-    # - 8.8.4.4
+    - 8.8.8.8
+    - 8.8.4.4
 
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
@@ -55,16 +55,16 @@ dns:
     # - tls://dns.adguard-dns.com
 
     # Option 2 | Cloudflare DNS
-    - 1.1.1.1
-    - 1.0.0.1
-    - https://dns.cloudflare.com/dns-query
-    - tls://1dot1dot1dot1.cloudflare-dns.com
+    # - 1.1.1.1
+    # - 1.0.0.1
+    # - https://dns.cloudflare.com/dns-query
+    # - tls://1dot1dot1dot1.cloudflare-dns.com
 
     # Option 3 | Google DNS
-    # - 8.8.8.8
-    # - 8.8.4.4
-    # - https://dns.google/dns-query
-    # - tls://dns.google
+    - 8.8.8.8
+    - 8.8.4.4
+    - https://dns.google/dns-query
+    - tls://dns.google
 
 proxy-providers:
   # Note: Recommended Healt Check URL
