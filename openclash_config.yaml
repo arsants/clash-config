@@ -74,7 +74,8 @@ proxy-providers:
   PROXIES:
     type: http
     path: "./proxy_provider/proxies.yaml"
-    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/proxy_provider/proxies.yaml"
+    # url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/proxy_provider/proxies.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/proxy_provider/proxies-trojan.yaml"
     interval: 3600
     health-check:
       enable: true
@@ -250,7 +251,7 @@ rules:
   # Special access rules for adult content (custom proxy or special handling)
   - RULE-SET,Adult,SPECIAL ACCESS
 
-  # Global rules for e-commerce and social media platforms (use proxy)
+  # (use proxy)
   - RULE-SET,Facebook,MANUAL SELECT
   - RULE-SET,Instagram,MANUAL SELECT
   - RULE-SET,TikTok,MANUAL SELECT

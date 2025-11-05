@@ -1,0 +1,27 @@
+# Define anchors for common configurations
+common: &common
+  type: trojan
+  server: vpn.arsants.ru
+  port: 30648
+  password: PASSWORD # Default password, can be overridden in each proxy
+  udp: true
+  skip-cert-verify: true
+  network: ws
+
+# Define anchor for ws-opts configuration
+ws_opts: &ws_opts
+  path: /trojan # Default path, can be overridden in each proxy
+
+proxies:
+
+  # NetQ
+  - name: "Ysz4HpFv9d"
+    <<: *common
+    password: knerxybn
+    sni: vpn.arsants.ru
+    ws-opts:
+      <<: *ws_opts
+      # path: "/override_default_path"
+      headers:
+        Host: vpn.arsants.ru
+
