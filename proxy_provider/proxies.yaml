@@ -21,6 +21,6 @@ proxies:
     <<: *common
     uuid: 34d17016-1c59-409f-9843-817ee83d307a
     reality-opts:
-      <<: *reality
+      <<: *reality-opts
       # public-key: "/override_default_path"
       # short-id: "/override_default_path"
