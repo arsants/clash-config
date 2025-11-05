@@ -1,48 +1,26 @@
 # Define anchors for common configurations
 common: &common
-  type: trojan
-  server: 104.17.3.81
-  port: 443
-  password: PASSWORD # Default password, can be overridden in each proxy
+  type: vless
+  server: vpn.arsants.ru
+  port: 13747
+  uuid: 00000000-0000-0000-0000-000000000000 # Default uuid, can be overridden in each proxy
+  network: tcp
+  tls: true
   udp: true
-  skip-cert-verify: true
-  network: ws
+  client-fingerprint: chrome
+  servername: teamdocs.su
 
-# Define anchor for ws-opts configuration
-ws_opts: &ws_opts
-  path: /trojan # Default path, can be overridden in each proxy
+# Define anchor for reality-opts configuration
+reality-opts: &reality-opts
+  public-key: xf9_fjTLSlmie7Vz4G99mDknQADHglyTg_Njs_1sHz8
+  short-id: "b683a8545b79"
 
 proxies:
-
-  # NetQ
-  - name: "N-ID1"
+  
+  - name: "VLESS"
     <<: *common
-    # password: override_default_password
-    sni: id1.danupoint.my.id
-    ws-opts:
-      <<: *ws_opts
-      # path: "/override_default_path"
-      headers:
-        Host: id1.danupoint.my.id
-
-  # NetQ
-  - name: "N-ID2"
-    <<: *common
-    # password: override_default_password
-    sni: id2.danupoint.my.id
-    ws-opts:
-      <<: *ws_opts
-      # path: "/override_default_path"
-      headers:
-        Host: id2.danupoint.my.id
-
-  # NetQ
-  - name: "N-ID3"
-    <<: *common
-    # password: override_default_password
-    sni: id3.danupoint.my.id
-    ws-opts:
-      <<: *ws_opts
-      # path: "/override_default_path"
-      headers:
-        Host: id3.danupoint.my.id
+    uuid: 34d17016-1c59-409f-9843-817ee83d307a
+    reality-opts:
+      <<: *reality
+      # public-key: "/override_default_path"
+      # short-id: "/override_default_path"

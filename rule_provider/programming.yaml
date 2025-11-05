@@ -1,0 +1,10 @@
+payload:
+  # Programming
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,deepl.com
+  - DOMAIN-SUFFIX,react-pdf.org
+  - DOMAIN-SUFFIX,swagger.io
+  - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,t3.chat
+  - DOMAIN-SUFFIX,n8n.cloud

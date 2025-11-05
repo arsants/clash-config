@@ -1,0 +1,5 @@
+payload:
+  # Domain suffixes for Twitter and its affiliated services
+  - DOMAIN-SUFFIX,betterttv.net
+  - DOMAIN-SUFFIX,7tv.app
+  - DOMAIN-SUFFIX,7tv.io

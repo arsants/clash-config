@@ -74,7 +74,7 @@ proxy-providers:
   PROXIES:
     type: http
     path: "./proxy_provider/proxies.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/proxy_provider/proxies.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/proxy_provider/proxies.yaml"
     interval: 3600
     health-check:
       enable: true
@@ -154,95 +154,94 @@ proxy-groups:
 
 rule-providers:
   # Ensure the YAML files exist in the specified paths.
-    
   REJECT:
     type: http
     path: "./rule_provider/reject.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/reject.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/reject.yaml"
     interval: 3600
     behavior: classical
 
   DIRECT:
     type: http
     path: "./rule_provider/direct.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/direct.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/direct.yaml"
     interval: 3600
     behavior: classical
 
   Adult:
     type: http
     path: "./rule_provider/adult.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/adult.yaml"
-    interval: 3600
-    behavior: classical
-
-  E-Commerce:
-    type: http
-    path: "./rule_provider/e-commerce.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/e-commerce.yaml"
-    interval: 3600
-    behavior: classical
-
-  E-Wallet:
-    type: http
-    path: "./rule_provider/e-wallet.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/e-wallet.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/adult.yaml"
     interval: 3600
     behavior: classical
 
   Facebook:
     type: http
     path: "./rule_provider/facebook.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/facebook.yaml"
-    interval: 3600
-    behavior: classical
-
-  Finance:
-    type: http
-    path: "./rule_provider/finance.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/finance.yaml"
-    interval: 3600
-    behavior: classical
-
-  Games:
-    type: http
-    path: "./rule_provider/games.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/games.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/facebook.yaml"
     interval: 3600
     behavior: classical
 
   Instagram:
     type: http
     path: "./rule_provider/instagram.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/instagram.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/instagram.yaml"
     interval: 3600
     behavior: classical
 
   TikTok:
     type: http
     path: "./rule_provider/tiktok.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/tiktok.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/tiktok.yaml"
     interval: 3600
     behavior: classical
 
   Twitter:
     type: http
     path: "./rule_provider/twitter.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/twitter.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/twitter.yaml"
     interval: 3600
     behavior: classical
 
   WhatsApp:
     type: http
     path: "./rule_provider/whatsapp.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/whatsapp.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/whatsapp.yaml"
     interval: 3600
     behavior: classical
 
   YouTube:
     type: http
     path: "./rule_provider/youtube.yaml"
-    url: "https://raw.githubusercontent.com/danuhdw/openclash-config/refs/heads/main/rule_provider/youtube.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/youtube.yaml"
+    interval: 3600
+    behavior: classical
+  
+  Programming:
+    type: http
+    path: "./rule_provider/programming.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/programming.yaml"
+    interval: 3600
+    behavior: classical
+  
+  Discord:
+    type: http
+    path: "./rule_provider/discord.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/discord.yaml"
+    interval: 3600
+    behavior: classical
+  
+  Twitch:
+    type: http
+    path: "./rule_provider/twitch.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/twitch.yaml"
+    interval: 3600
+    behavior: classical
+  
+  NoResolve:
+    type: http
+    path: "./rule_provider/no-resolve.yaml"
+    url: "https://raw.githubusercontent.com/arsants/clash-config/refs/heads/main/rule_provider/no-resolve.yaml"
     interval: 3600
     behavior: classical
 
@@ -253,25 +252,22 @@ rules:
   # Direct rules for local or trusted traffic (no proxy)
   - RULE-SET,DIRECT,DIRECT
 
-  # Direct rules for financial services (finance and e-wallet)
-  - RULE-SET,Finance,DIRECT
-  - RULE-SET,E-Wallet,DIRECT
-
-  # Direct rules for gaming and messaging apps
-  - RULE-SET,Games,DIRECT
   - RULE-SET,WhatsApp,DIRECT
 
   # Special access rules for adult content (custom proxy or special handling)
   - RULE-SET,Adult,SPECIAL ACCESS
 
   # Global rules for e-commerce and social media platforms (use proxy)
-  - RULE-SET,E-Commerce,GLOBAL
   - RULE-SET,Facebook,GLOBAL
   - RULE-SET,Instagram,GLOBAL
   - RULE-SET,TikTok,GLOBAL
   - RULE-SET,Twitter,GLOBAL
   - RULE-SET,YouTube,GLOBAL
+  - RULE-SET,Programming,GLOBAL
+  - RULE-SET,Discord,GLOBAL
+  - RULE-SET,Twitch,GLOBAL
+  - RULE-SET,NoResolve,GLOBAL,no-resolve
 
-  # Default rule: route all unmatched traffic through the global proxy
-  - MATCH,GLOBAL
+  # Default rule: route all unmatched traffic directly
+  - MATCH,DIRECT
   
